@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'PFStardust';
+    font-size: 16px;
+    list-style: none;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+section{
+    position:relative;
+    top:0;
+    left:0;
+    width:500px;
+    height: 720px;
+    border:1px solid white;
+    
+    /* background: paleturquoise; */
+}
+.sec0{
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>.main_back{
+    width:500px;
+    height: 500px;
+    background: url(/img/배경png.png);
+    background-size: 100%;
+    margin-top:100px;
+}    
+.sec0>.main_back>.quiz{
+    position: absolute;
+    top:100px;
+    left:0;
+    width:100%;
+    height: 50%;
+    border: 0px solid black;
+    /* background: white; */
+}
+.sec0>.main_back>.quiz>p{
+    width:100%;
+    /* height: 50px; */
+    padding:10px;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.sec0>.main_back>.quiz>div{
+    width: 100%;
+    height: 90%;
+    border: 0px solid paleturquoise;
+    /* background: white; */
+}
+.sec0>.main_back>.quiz>div>div{
+    width:70%;
+    /* height: 50px; */
+    border: 0px solid black;
+    padding:20px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom:20px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    line-height: 1.75;
+    cursor: pointer;
+    background: url(/img/box1_.png);
+    background-size: 100% 100%;
+}
+.sec0>.main_back>.quiz>div>div:nth-child(1){
+    margin-top:20px;
+}
+.sec0>.main_back>.btn{
+    position: absolute;
+    top:72%;
+    width:100%;
+    height: 50px;
+    border: 0px solid black;
+}
+.sec0>.main_back>.btn>div{
+    width:40%;
+    height: 100%;
+    border: 1px solid black;
+    line-height: 50px;
+    text-align: center;
+    background: rgb(255, 255, 123);
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>.bar{
+    position: absolute;
+    top:85%;
+    left:0;
+    width:100%;
+    height: 15%;
+    border: 0px solid black;
+}
+.sec0>.bar>ul{
+    width:100%;
+    height: 10px;
+    border:0px solid black;
+    display: flex;
+    padding:0;
+}
+.sec0>.bar>ul>li{
+    width:10%;
+    height: 100%;
+    border: 1px solid white;
+    margin-left:0;
+}
+.sec0>.bar>ul>li:nth-child(1){
+    background: plum;
+}
+.sec0>.bar>.page{
+    width:100%;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.sec0>.bar>.page>p{
+    width:10%;
+}
+.quiz{
+    z-index: 0;
+}
+.quiz1{
+    z-index: 3;
+}
