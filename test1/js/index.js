@@ -64,7 +64,7 @@ window.onload = function(){
     if(file_name==="result.html"){
         j=0;
         setInterval(function(){
-            $(".loading_img").css("background","url(/img/로딩바"+j+".png)");
+            $(".loading_img").css("background","url(../img/로딩바"+j+".png)");
             j++;
         }, 235, j);
         setTimeout(function(){
