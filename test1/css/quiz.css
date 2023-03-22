@@ -29,7 +29,7 @@ section{
 .sec0>.main_back{
     width:500px;
     height: 500px;
-    background: url(/img/back.png);
+    background: url(../img/back.png);
     background-size: 100%;
     margin-top:100px;
 }    

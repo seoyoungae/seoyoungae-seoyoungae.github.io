@@ -40,7 +40,7 @@ section, .loading{
     margin-left:50%;
     transform: translateX(-50%);
     margin-top: 100px;
-    background: url(/img/KakaoTalk_20230321_141838265_05.png);
+    background: url(../img/KakaoTalk_20230321_141838265_05.png);
     background-size: 100%;
 }
 .sec0>.btn_box{
@@ -62,7 +62,7 @@ section, .loading{
     text-align: center;
     cursor: pointer;
     margin-right:9px;
-    background: url(/img/box.png);
+    background: url(../img/box.png);
     background-size: 100% 100%;;
   }
   .sec0>.btn_box>div:nth-child(1){
@@ -95,7 +95,7 @@ section, .loading{
     height:500px;
     border: 1px solid black;
     /* transform: translateY(-50%); */
-    background: url(/img/back.png);
+    background: url(../img/back.png);
     background-size: 100%;
 }
 .loading>.loading_box>p{
@@ -110,7 +110,7 @@ section, .loading{
 .loading>.loading_box>.loading_img{
   width:80%;
   height: 100px;
-  background: url(/img/로딩바0.png);
+  background: url(../img/로딩바0.png);
   background-size: 100% 100%;
   margin-left:50px;
   margin-top:60px
