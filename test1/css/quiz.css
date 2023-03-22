@@ -68,7 +68,7 @@ section{
     transform: translateX(-50%);
     line-height: 1.75;
     cursor: pointer;
-    background: url(/img/box1_.png);
+    background: url(../img/box1_.png);
     background-size: 100% 100%;
 }
 .sec0>.main_back>.quiz>div>div:nth-child(1){
