@@ -63,10 +63,10 @@ window.onload = function(){
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
     if(file_name==="result.html"){
         j=0;
-        setInterval(function(){
-            $(".loading_img").css("background","url(../img/로딩바"+j+".png)");
-            j++;
-        }, 235,j);
+        // setInterval(function(){
+        //     $(".loading_img").css("background","url(../img/로딩바"+j+".png)");
+        //     j++;
+        // }, 235,j);
         setTimeout(function(){
             $(".loading").hide(); }, 5000);
         if(localStorage.getItem('a_save')){
@@ -81,14 +81,14 @@ window.onload = function(){
 
         $(".link").on("click",function(){
             var url = '';
-	var textarea = document.createElement("textarea");
-	document.body.appendChild(textarea);
-	url = window.document.location.href;
-	textarea.value = url;
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-	alert("URL이 복사되었습니다.")
+	        var textarea = document.createElement("textarea");
+	        document.body.appendChild(textarea);
+	        url = window.document.location.href;
+	        textarea.value = url;
+	        textarea.select();
+	        document.execCommand("copy");
+	        document.body.removeChild(textarea);
+	        alert("URL이 복사되었습니다.")
         })
     }
 }
