@@ -66,7 +66,7 @@ window.onload = function(){
         setInterval(function(){
             $(".loading_img").css("background","url(../img/로딩바"+j+".png)");
             j++;
-        }, 235);
+        }, 235,j);
         setTimeout(function(){
             $(".loading").hide(); }, 5000);
         if(localStorage.getItem('a_save')){
