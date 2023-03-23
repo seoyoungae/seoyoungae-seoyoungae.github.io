@@ -12,47 +12,51 @@
     text-decoration: none;
     font-weight: bold;
 }
-section{
+
+section,.loading{
     position:relative;
     top:0;
     left:0;
-    width:500px;
+    width:550px;
     height: 720px;
     border:1px solid white;
     
     /* background: paleturquoise; */
 }
 .sec0{
-    margin-left:50%;
+    margin-left: 50%;
     transform: translateX(-50%);
 }
 .sec0>.main_back{
-    width:500px;
-    height: 500px;
-    background: url(/img/back.png);
-    background-size: 100%;
-    margin-top:100px;
+    width:550px;
+    height:550px;
+    background: url(../img/back.png);
+    background-size: 100% 100%;
+    margin-top:80px;
 }    
 .sec0>.main_back>.quiz{
     position: absolute;
     top:100px;
     left:0;
     width:100%;
-    height: 50%;
+    height:100%;
     border: 0px solid black;
     /* background: white; */
 }
 .sec0>.main_back>.quiz>p{
-    width:100%;
-    /* height: 50px; */
-    padding:10px;
-    line-height: 1.4;
-    font-size: 1.5rem;
+    width:90%;
+    /* height: 15%; */
+    border: 0px solid black;
+    padding:20px;
+    font-size: 2rem;
+    line-height: 40px;
     text-align: center;
+    margin:0px;
+    margin-bottom: 0px;
 }
 .sec0>.main_back>.quiz>div{
     width: 100%;
-    height: 90%;
+    height: 60%;
     border: 0px solid paleturquoise;
     /* background: white; */
 }
@@ -60,20 +64,19 @@ section{
     width:70%;
     /* height: 50px; */
     border: 0px solid black;
-    padding:20px;
+    padding:15px;
     text-align: center;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom:20px;
     margin-left:50%;
     transform: translateX(-50%);
     line-height: 1.75;
+    font-size:1.3rem;
     cursor: pointer;
-    background: url(/img/box1_.png);
+    background: url(../img/box1_.png);
     background-size: 100% 100%;
 }
-.sec0>.main_back>.quiz>div>div:nth-child(1){
-    margin-top:20px;
-}
+
 .sec0>.main_back>.btn{
     position: absolute;
     top:72%;
@@ -84,7 +87,7 @@ section{
 .sec0>.main_back>.btn>div{
     width:40%;
     height: 100%;
-    border: 1px solid black;
+    border: 0px solid black;
     line-height: 50px;
     text-align: center;
     background: rgb(255, 255, 123);
@@ -96,7 +99,7 @@ section{
 }
 .sec0>.bar{
     position: absolute;
-    top:85%;
+    top:87%;
     left:0;
     width:100%;
     height: 15%;
@@ -128,9 +131,143 @@ section{
 .sec0>.bar>.page>p{
     width:10%;
 }
-.quiz{
-    z-index: 0;
-}
-.quiz1{
-    z-index: 3;
+
+.loading{
+    position: absolute;
+    top:0;
+    left:0;
+    width:550px;
+    height: 700px;
+     background: white;
+   display: none;
+ }
+ .loading>.loading_box{
+     position: absolute;
+     top:100px;
+     left:0;
+     z-index: 50;
+     width:550px;
+     height:550px;
+     border: 0px solid black;
+     /* transform: translateY(-50%); */
+     background: url(../img/back.png);
+     background-size: 100%;
+ }
+ .loading>.loading_box>p{
+   width:100%;
+   margin-top:100px;
+   font-size:2.5rem;
+   line-height: 1.75;
+   text-align: center;
+   color:rgb(157, 0, 225);
+   font-weight: bold;
+ }
+ .loading>.loading_box>.loading_img{
+   width:80%;
+   height: 100px;
+   background: url(../img/로딩바0.png);
+   background-size: 100% 100%;
+   margin-left:50px;
+   margin-top:60px;
+   animation: loading_ani 5s linear;
+ }
+ @keyframes loading_ani{
+   0%{
+     background: url(../img/로딩바0.png);
+     background-size: 100% 100%;
+   }
+   5%{
+     background: url(../img/로딩바1.png);
+     background-size: 100% 100%;
+   }
+   10%{
+     background: url(../img/로딩바2.png);
+     background-size: 100% 100%;
+   }
+   15%{
+     background: url(../img/로딩바3.png);background-size: 100% 100%;
+   }
+   20%{
+     background: url(../img/로딩바4.png);
+     background-size: 100% 100%;
+   }
+   25%{
+     background: url(../img/로딩바5.png);
+     background-size: 100% 100%;
+   }
+   30%{
+     background: url(../img/로딩바6.png);
+     background-size: 100% 100%;
+   }
+   35%{
+     background: url(../img/로딩바7.png);
+     background-size: 100% 100%;
+   }
+   40%{
+     background: url(../img/로딩바8.png);
+     background-size: 100% 100%;
+   }
+   45%{
+     background: url(../img/로딩바9.png);
+     background-size: 100% 100%;
+   }
+   50%{
+     background: url(../img/로딩바10.png);
+     background-size: 100% 100%;
+   }
+   55%{
+     background: url(../img/로딩바11.png);
+     background-size: 100% 100%;
+   }
+   60%{
+     background: url(../img/로딩바12.png);
+     background-size: 100% 100%;
+   }
+   65%{
+     background: url(../img/로딩바13.png);
+     background-size: 100% 100%;
+   }
+   70%{
+     background: url(../img/로딩바14.png);
+     background-size: 100% 100%;
+   }
+   75%{
+     background: url(../img/로딩바15.png);
+     background-size: 100% 100%;
+   }
+   80%{
+     background: url(../img/로딩바16.png);
+     background-size: 100% 100%;
+   }
+   85%{
+     background: url(../img/로딩바17.png);
+     background-size: 100% 100%;
+   }
+   90%{
+     background: url(../img/로딩바18.png);
+     background-size: 100% 100%;
+   }
+   95%{
+     background: url(../img/로딩바19.png);
+     background-size: 100% 100%;
+   }
+   100%{
+     background: url(../img/로딩바20.png);
+     background-size: 100% 100%;
+   }
+ }
+
+ @media screen and (max-width:500px) {
+    section{
+        width:100%;
+        height: 750px;
+    }    
+    .sec0>.main_back{
+        width:100%;
+    }
+    .sec0>.loading,
+    .sec0>.loading>.loading_box{
+        width:100%;
+        background-size: 100% 100%;
+    }
 }

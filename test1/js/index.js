@@ -48,7 +48,11 @@ window.onload = function(){
             $(".page>p:eq(0)").text(num);
             
         }else if(num===10){
-            location.href="result.html";
+            $(".loading").show();
+            setTimeout(function(){
+                location.href="result.html";    
+            }, 5000);
+            
             localStorage.setItem('a_save',a);
         }
         if(num<11){
@@ -63,12 +67,11 @@ window.onload = function(){
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
     if(file_name==="result.html"){
         j=0;
-        setInterval(function(){
-            $(".loading_img").css("background","url(/img/로딩바"+j+".png)");
-            j++;
-        }, 235, j);
-        setTimeout(function(){
-            $(".loading").hide(); }, 5000);
+        // setInterval(function(){
+        //     $(".loading_img").css("background","url(../img/로딩바"+j+".png)");
+        //     j++;
+        // }, 235,j);
+        
         if(localStorage.getItem('a_save')){
             a = localStorage.getItem('a_save');
         }
@@ -79,16 +82,20 @@ window.onload = function(){
         // $(".result_pic").css("background", "url(/img/"+result_pic[result]+".png)");
         //     $(".result_pic").css("backgroundSize", "100% 100%");
 
-        $(".link").on("click",function(){
-            var url = '';
-	var textarea = document.createElement("textarea");
-	document.body.appendChild(textarea);
-	url = window.document.location.href;
-	textarea.value = url;
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-	alert("URL이 복사되었습니다.")
-        })
+        
     }
+    $(".link").on("click",function(){
+        var url = '';
+        var textarea = document.createElement("textarea");
+        document.body.appendChild(textarea);
+        url = window.document.location.href;
+        textarea.value = url;
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("URL이 복사되었습니다.")
+    })
+    $(".home").on("click",function(){
+        location.href="../index.html";
+    })
 }
