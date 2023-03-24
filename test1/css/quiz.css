@@ -1,18 +1,17 @@
 @font-face {
-    font-family: 'PFStardust';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'KimjungchulGothic-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 *{
-    font-family: 'PFStardust';
+  font-family: 'KimjungchulGothic-Bold';
     font-size: 16px;
     list-style: none;
     color:black;
     text-decoration: none;
     font-weight: bold;
 }
-
 section,.loading{
     position:relative;
     top:0;
@@ -76,7 +75,6 @@ section,.loading{
     background: url(../img/box1_.png);
     background-size: 100% 100%;
 }
-
 .sec0>.main_back>.btn{
     position: absolute;
     top:72%;
@@ -131,7 +129,6 @@ section,.loading{
 .sec0>.bar>.page>p{
     width:10%;
 }
-
 .loading{
     position: absolute;
     top:0;
@@ -256,7 +253,6 @@ section,.loading{
      background-size: 100% 100%;
    }
  }
-
  @media screen and (max-width:500px) {
     section{
         width:100%;
