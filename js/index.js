@@ -7,8 +7,9 @@ window.onload = function(){
     })
 
     $(".test2").on("click", function(){
-        location.href="/test2/index.html";
+        location.href="/test3/index.html";
     })
+    
 
     $(".tag_box>li").on("click", function(){
         i=$(this).index()+1;
@@ -19,6 +20,5 @@ window.onload = function(){
             $(".test_list>div").hide();
             $(".tag_"+i).show();
         }
-       
     })
 }
