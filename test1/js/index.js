@@ -18,7 +18,7 @@ const quiz = [{"q":"배달 앱 속 나의 등급은?",
     "q":"드디어 금요일, 주말에 뭐할까?", "a":["집에 있다가 만나자는 연락을 받으면 저녁에 슬슬 기어나간다.","주말에..왜 약속을... 난 쉴랭! 굳이 먼저 약속을 따로 잡지 않는다.","집에 있는건 너무 심심해! 친구들한테 만나자며 먼저 연락한다."]
 },{"q":"집에 있을 때 나의 모습은?","a":["으 시간이 왜 이렇게 안가.. 주변 친구들에게 연락해서 나갈 각 잡기","밀린 드라마나 영화가 너무 많아.. 하루가 너무 짧다.","낮엔 자고 밤에 나가야지~ 8~9시쯤 나갈 준비를 해본다.ㄹ"]}]
 
-let i, num=0, q, a=0, result=0;
+let i, num=0, q, a=0, result=0, level=0;
 
 window.onload = function(){
     a=0;
@@ -57,14 +57,15 @@ window.onload = function(){
             localStorage.setItem('a_save',a);
         }
         if(num<11){
-            if((i%3)==0){
-                a+=0;
-            }else if((i%3)===1){
+            if(i===0){
                 a+=1;
-            }
-            else if((i%3)===2){
+            }else if(i===1){
                 a+=2;
             }
+            else if(i===2){
+                a+=0;
+            }
+            console.log(a);
         }
     })
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
@@ -73,29 +74,28 @@ window.onload = function(){
             a = localStorage.getItem('a_save');
         }
 
-        if(a<1){
+        if(a<5){
             level=1;
-        }else if(0<a<5){
+            console.log("레벨1");
+        }else if(5<=a && a<8){
             level=2;
-        }else if(4<a<8){
-            level=2;
-        }else if(7<a<13){
+            console.log("레벨2");
+        }else if(8<=a && a<13){
             level=3;
-        }else if(12<a<16){
+            console.log("레벨3");
+        }else if(13<=a && a<16){
             level=4;
-        }else if(15<a){
+            console.log("레벨4");
+        }else if(16<=a){
             level=5;
+            console.log("레벨5");
         }
 
-        $(".result_pic").css("background","url(/test1/img/level"+level+".png)");
+        $(".result_pic").css("background","url(../img/level"+level+".png)");
         $(".result_pic").css("background-size","100% 100%");
         
-        if(localStorage.getItem('a_save')){
-            a = localStorage.getItem('a_save');
-        }
-        result=Number(a)-9;
         console.log("a:"+a);
-        console.log("result:"+result);
+        console.log("level:"+level);
         
         // $(".result_pic").css("background", "url(/img/"+result_pic[result]+".png)");
         //     $(".result_pic").css("backgroundSize", "100% 100%");
