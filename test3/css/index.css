@@ -6,7 +6,7 @@
 }
 section{
     width:500px;
-    height: 720px;
+    height: 700px;
     border:1px solid white;
     margin-left:50%;
     transform: translateX(-50%);
@@ -14,10 +14,11 @@ section{
 .sec0{
     /* background: paleturquoise; */
 }
+
 .sec0>.pic{
     margin-left:50%;
     transform: translateX(-50%);
-    margin-top: 100px;
+    margin-top: 50px;
     width:100%;
     height: 500px;
     cursor: pointer;
@@ -44,7 +45,7 @@ section{
     cursor: pointer;
 }
 .sec0>.home{
-    top:720px;
+    top:570px;
     width:220px;
     margin-bottom: 100px;
     /* border: 1px solid white; */

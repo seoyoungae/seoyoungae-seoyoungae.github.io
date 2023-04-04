@@ -9,7 +9,7 @@ section{
     top:0;
     left:0;
     width:390px;
-    height: 720px;
+    height: 1000px;
     border:1px solid white;
     
     /* background: paleturquoise; */
@@ -26,9 +26,29 @@ section{
     text-align: center;
     /* color: white; */
 }
+.sec0>iframe{
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>p{
+    font-size: 0.5rem;
+    width:100%;
+    text-align: center;
+}
+.sec0>.prev{
+    width:100px;
+    height: 40px;
+    line-height: 40px;
+    border: 0px solid black;
+    text-align: center;
+    margin-top:50px;
+    border-radius: 10px;
+    background: paleturquoise;
+    cursor: pointer;
+}
 .sec0>.quiz{
     position: absolute;
-    top:10%;
+    top:35%;
     left:0;
     width:100%;
     height: 50%;
@@ -83,7 +103,7 @@ section{
 }
 .sec0>.bar{
     position: absolute;
-    top:80%;
+    top:90%;
     left:0;
     width:100%;
     height: 15%;

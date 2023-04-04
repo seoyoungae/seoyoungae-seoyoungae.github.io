@@ -13,7 +13,7 @@ const qna = [
         "a" :["조용한 실내 데이트","신나는 실외 데이트"]
     },{
         
-        "a":"친구들과 술자리 약속에 간 연인이 연락 두절 상태라면?",
+        "q":"친구들과 술자리 약속에 간 연인이 연락 두절 상태라면?",
         "a":[
         "설마 다른 이성이랑 놀고 있는 건 아니겠지?",
         "감히 내 연락을 안 받아?!"]},        
@@ -67,7 +67,7 @@ window.onload = function(){
     })
 
     $(".a").on("click", function(){
-
+        
         i=$(this).index();
         if(num<4){
             if(i===0){
@@ -94,21 +94,18 @@ window.onload = function(){
                 pj--;
             }
         }
-    
         if(num<11){
             num++;
+            console.log(num);
+            $(".page>p:eq(0)").text(num+1);
             $("li:eq("+(num)+")").css("background","plum");
 
             $(".q").text(qna[num].q);
             for(j=0;j<2;j++){
                 $(".a:eq("+j+")").text(qna[num].a[j]);
             }
-        }
-        if(num===11){
-            num++;
-            $(".page>p:eq(0)").text(num);
             
-        }else if(num===12){
+        }else if(num===11){
             a+=Number($(this).text());
             location.href="result.html";
             
@@ -139,19 +136,71 @@ window.onload = function(){
         
     })
 
+    $(".prev").on("click", function(){
+        
+        if(num<4){
+            if(i===0){
+                ie--;
+            }else{
+                ie++;
+            }
+        }else if(num<7){
+            if(i===0){
+                ns--;
+            }else{
+                ns++;
+            }
+        }else if(num<10){
+            if(i===0){
+                ft--;
+            }else{
+                ft++;
+            }
+        }else if(num<13){
+            if(i===0){
+                pj--;
+            }else{
+                pj++;
+            }
+        }
+        num--;
+        console.log(num);
+        $(".page>p:eq(0)").text(num+1);
+        $("li:eq("+(num+1)+")").css("background","white");
+        $(".q").text(qna[num].q);
+            for(j=0;j<2;j++){
+                $(".a:eq("+j+")").text(qna[num].a[j]);
+        }
+    })
     
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
     if(file_name==="result.html"){
         setTimeout(function(){
             $(".loading").hide();
+            $(".result_pic").show();
+            $(".result_pic").css("height","200px");
+
         }, 5000);
+
+        
+
+        time = 1000 * 60 * 30;
+        setInterval(function(){
+            $(".result_pic").css("height","200px");
+            $(".c_btn").show();
+        }, time);
         if(localStorage.getItem('result_save')){
             result = localStorage.getItem('result_save');
         }
         $(".result_pic").css("background", "url(./img/"+result+".png)");
-        $(".result_pic").css("backgroundSize", "100% 100%");
+        $(".result_pic").css("backgroundSize", "100%");
     }
        
+    $(".c_btn").on("click", function(){
+        $(".result_pic").css("height","1000px");
+        $(".c_btn").hide();
+        window.open("https://link.coupang.com/a/TYJmC")
+    })
     $(".link").on("click",function(){
         var url = '';
         var textarea = document.createElement("textarea");
