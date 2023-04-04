@@ -25,6 +25,15 @@ section, .loading{
     z-index: 0;
     /* background: paleturquoise; */
 }
+.sec0>iframe{
+  margin-left:50%;
+  transform: translateX(-50%);
+}
+.sec0>.c_text{
+  font-size: 0.5rem;
+  width:100%;
+  text-align: center;
+}
 .sec0>p{
     width:100%;
     height: 80px;
@@ -36,22 +45,34 @@ section, .loading{
 }
 .sec0>.result_pic{
     width:550px;
-    height: 550px;
+    height: 200px;
     margin-left:50%;
     transform: translateX(-50%);
-    margin-top: 100px;
-    background: url(../img/level1.png);
-    background-size: 100%;
+    /* margin-top: 50px; */
+}
+.sec0>.result_pic>.c_btn{
+  position: relative;
+  top:130px;
+  left:50%;
+  transform: translateX(-50%);
+  width:250px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: palegreen;
+  text-align: center;
+  cursor: pointer;
 }
 .sec0>.btn_box{
   position: absolute;
-  top:453px;
+  top:690px;
   left:0;
     width:100%;
     height: 75px;
     margin-top:90px;
     display: flex;
     justify-content: center;
+    /* display: none; */
 }
 .sec0>.btn_box>div{
     width:145px;

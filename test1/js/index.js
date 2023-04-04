@@ -68,6 +68,28 @@ window.onload = function(){
             console.log(a);
         }
     })
+    $(".prev").on("click", function(){
+        
+        if(num<11){
+            if(i===0){
+                a-=1;
+            }else if(i===1){
+                a-=2;
+            }
+            else if(i===2){
+                a-=0;
+            }
+            console.log(a);
+        }
+        num--;
+        console.log(num);
+        $(".page>p:eq(0)").text(num+1);
+        $("li:eq("+(num+1)+")").css("background","white");
+        $(".q").html(quiz[num].q);
+        for(j=0;j<3;j++){
+            $(".a:eq("+j+")").html(quiz[num].a[j]);
+        }
+    })
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
     if(file_name==="result.html"){
         if(localStorage.getItem('a_save')){
@@ -91,8 +113,8 @@ window.onload = function(){
             console.log("레벨5");
         }
 
-        $(".result_pic").css("background","url(../img/level"+level+".png)");
-        $(".result_pic").css("background-size","100% 100%");
+        $(".result_pic").css("background","url(../img/level"+level+".png) no-repeat");
+        $(".result_pic").css("background-size","100%");
         
         console.log("a:"+a);
         console.log("level:"+level);
@@ -102,6 +124,12 @@ window.onload = function(){
 
         
     }
+    $(".c_btn").on("click", function(){
+        $(".result_pic").css("height","600px");
+        $(".c_btn").hide();
+        window.open("https://link.coupang.com/a/TYJmC");
+        $(".btn_box").show();
+    })
     $(".link").on("click",function(){
         var url = '';
         var textarea = document.createElement("textarea");
