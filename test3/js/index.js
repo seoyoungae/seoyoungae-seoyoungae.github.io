@@ -24,14 +24,14 @@ const qna = [
 ]},{
         "q":"내가 더 선호하는 대화는?",
         "a":["상상력이 필요한 미래지향적인 대화",
-        "현재 유행하는 것이나, 관심사에 관해 이야기하는 대화"]},{
+        "현재 유행하는 것이나, <br>관심사에 관해 이야기하는 대화"]},{
         "q":"연인과 갈등 상황에 나는?",
-        "a":["할 말은 많은데 감정이 먼저 상해서 생각 정리가 잘 안된다",
-        "답답하지만 이성적으로 갈등을 풀어가려고 침착하게 말한다"]},{
+        "a":["할 말은 많은데 감정이 <br>먼저 상해서 생각 정리가 잘 안된다",
+        "답답하지만 이성적으로 갈등을 풀어가려고 <br>침착하게 말한다"]},{
         
         "q":"활기차던 연인이 갑자기 심각한 얼굴로 고민을 털어 놓는다면?",
-        "a":["연인에게 감정이입을 하면서, 진지하게 듣고 공감한다",
-        "연인의 말을 끝까지 듣고, 문제를 해결해주려 한다"]},{
+        "a":["연인에게 감정이입을 하면서, <br>진지하게 듣고 공감한다",
+        "연인의 말을 끝까지 듣고, <br>문제를 해결해주려 한다"]},{
         
         "q":"연인이 아끼는 물건을 떨어뜨려서 부서졌다고 한다면?",
         "a":["어쩌다가 떨어진 거야? 어떡해 조심하지ㅠ",
@@ -43,19 +43,19 @@ const qna = [
         {
         "q":"연인과 데이트하기 전 나는?",
         "a":["약속 장소와 시간 정도만 정해 놓고 만난다",
-        "약속 장소와 시간은 물론 어디서 무엇을 할 건지 세세하게 정한다"]},
+        "약속 장소와 시간은 물론 <br>어디서 무엇을 할 건지 세세하게 정한다"]},
         
         {"q":"연인에게 편지를 쓴다면 나는?",
         "a":["일단 앉아서 그 자리에서 생각나는 대로 적는다",
         "어떻게 적을지 미리 생각해 놓고 옮겨 적는다"]}
 ]
 
-let i, num=0, q, a=0, result;
+let i, num=0, q, a=0, result, time;
 let ie=0, ns=0, ft=0, pj=0;
 
 window.onload = function(){
     a=0;
-
+    connectedDate = new Date();
     $(".q").text(qna[0].q);
     
     $(".a:eq(0)").text(qna[0].a[0]);
@@ -97,10 +97,10 @@ window.onload = function(){
         if(num<11){
             num++;
             console.log(num);
-            $(".page>p:eq(0)").text(num+1);
+            $(".page>p:eq(0)").html(num+1);
             $("li:eq("+(num)+")").css("background","plum");
 
-            $(".q").text(qna[num].q);
+            $(".q").html(qna[num].q);
             for(j=0;j<2;j++){
                 $(".a:eq("+j+")").text(qna[num].a[j]);
             }
@@ -165,14 +165,17 @@ window.onload = function(){
         }
         num--;
         console.log(num);
-        $(".page>p:eq(0)").text(num+1);
+        $(".page>p:eq(0)").html(num+1);
         $("li:eq("+(num+1)+")").css("background","white");
-        $(".q").text(qna[num].q);
+        $(".q").html(qna[num].q);
             for(j=0;j<2;j++){
                 $(".a:eq("+j+")").text(qna[num].a[j]);
         }
     })
     
+    
+
+
     file_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
     if(file_name==="result.html"){
         setTimeout(function(){
@@ -183,12 +186,23 @@ window.onload = function(){
         }, 5000);
 
         
+     
+    function showClock(){
+        var currentDate = new Date();
+         
+    time = Number((currentDate - connectedDate)/1000);
+    }
+             
+    setTimeout(showClock,1000);
 
-        time = 1000 * 60 * 30;
-        setInterval(function(){
-            $(".result_pic").css("height","200px");
-            $(".c_btn").show();
-        }, time);
+        console.log(time);
+        if(time>1800){
+            setTimeout(function(){
+                $(".c_btn").show();
+                $(".result_pic").css("heigth","200px");
+            })
+        }
+
         if(localStorage.getItem('result_save')){
             result = localStorage.getItem('result_save');
         }

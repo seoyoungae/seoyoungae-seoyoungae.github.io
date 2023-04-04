@@ -57,6 +57,7 @@ section, .loading{
   border-radius: 10px;
   background: palegreen;
   text-align: center;
+  cursor: pointer;
 }
 .sec0>.btn_box{
     width:100%;
