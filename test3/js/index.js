@@ -56,10 +56,10 @@ let ie=0, ns=0, ft=0, pj=0;
 window.onload = function(){
     a=0;
     connectedDate = new Date();
-    $(".q").text(qna[0].q);
+    $(".q").html(qna[0].q);
     
-    $(".a:eq(0)").text(qna[0].a[0]);
-    $(".a:eq(1)").text(qna[0].a[1]);
+    $(".a:eq(0)").html(qna[0].a[0]);
+    $(".a:eq(1)").html(qna[0].a[1]);
 
     
     $(".pic").on("click", function(){
@@ -102,7 +102,7 @@ window.onload = function(){
 
             $(".q").html(qna[num].q);
             for(j=0;j<2;j++){
-                $(".a:eq("+j+")").text(qna[num].a[j]);
+                $(".a:eq("+j+")").html(qna[num].a[j]);
             }
             
         }else if(num===11){
