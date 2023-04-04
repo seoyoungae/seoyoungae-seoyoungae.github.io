@@ -36,6 +36,9 @@ section{
     text-align: center;
 }
 .sec0>.prev{
+    position: absolute;
+    top:83%;
+    left:0;
     width:100px;
     height: 40px;
     line-height: 40px;

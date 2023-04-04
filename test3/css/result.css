@@ -51,13 +51,19 @@ section, .loading{
   top:130px;
   left:50%;
   transform: translateX(-50%);
-  width:250px;
-  height: 50px;
-  line-height: 50px;
+  width:300px;
+  height: 100px;
+  line-height: 25px;
+  font-size:0.4rem;
   border-radius: 10px;
   background: palegreen;
   text-align: center;
   cursor: pointer;
+  padding:10px;
+}
+sec0>.result_pic>.c_btn>sapn{
+  font-size:0.6rem;
+
 }
 .sec0>.btn_box{
     width:100%;

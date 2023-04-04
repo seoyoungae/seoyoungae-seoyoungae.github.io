@@ -26,7 +26,15 @@ section,.loading{
     margin-left: 50%;
     transform: translateX(-50%);
 }
-
+.sec0>iframe{
+  margin-left:50%;
+  transform: translateX(-50%);
+}
+.sec0>p{
+  font-size: 0.5rem;
+  width:100%;
+  text-align: center;
+}
 .sec0>.prev{
   width:100px;
   height: 40px;
@@ -43,11 +51,11 @@ section,.loading{
     height:550px;
     background: url(../img/back.png);
     background-size: 100% 100%;
-    margin-top:80px;
+    margin-top:0px;
 }    
 .sec0>.main_back>.quiz{
     position: absolute;
-    top:200px;
+    top:250px;
     left:0;
     width:100%;
     height:100%;
@@ -109,7 +117,7 @@ section,.loading{
 }
 .sec0>.bar{
     position: absolute;
-    top:98%;
+    top:120%;
     left:0;
     width:100%;
     height: 15%;
