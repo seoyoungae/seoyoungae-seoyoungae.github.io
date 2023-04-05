@@ -53,7 +53,7 @@ window.onload = function(){
             setTimeout(function(){
                 location.href="result.html";    
             }, 5000);
-            
+            $(".main_back").hide();
             localStorage.setItem('a_save',a);
         }
         if(num<11){
@@ -70,7 +70,8 @@ window.onload = function(){
     })
     $(".prev").on("click", function(){
         
-        if(num<11){
+        if(1<num && num<11){
+            num--;
             if(i===0){
                 a-=1;
             }else if(i===1){
@@ -81,7 +82,8 @@ window.onload = function(){
             }
             console.log(a);
         }
-        num--;
+
+        
         console.log(num);
         $(".page>p:eq(0)").text(num+1);
         $("li:eq("+(num+1)+")").css("background","white");

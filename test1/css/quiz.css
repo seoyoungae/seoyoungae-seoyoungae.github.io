@@ -51,14 +51,14 @@ section,.loading{
     height:550px;
     background: url(../img/back.png);
     background-size: 100% 100%;
-    margin-top:0px;
+    margin-top:100px;
 }    
 .sec0>.main_back>.quiz{
     position: absolute;
-    top:250px;
+    top:47%;
     left:0;
     width:100%;
-    height:100%;
+    height:550px;
     border: 0px solid black;
     /* background: white; */
 }
@@ -95,29 +95,10 @@ section,.loading{
     background: url(../img/box1_.png);
     background-size: 100% 100%;
 }
-.sec0>.main_back>.btn{
-    position: absolute;
-    top:72%;
-    width:100%;
-    height: 50px;
-    border: 0px solid black;
-}
-.sec0>.main_back>.btn>div{
-    width:40%;
-    height: 100%;
-    border: 0px solid black;
-    line-height: 50px;
-    text-align: center;
-    background: rgb(255, 255, 123);
-    border-radius: 10px;
-    cursor: pointer;
-    display: none;
-    margin-left:50%;
-    transform: translateX(-50%);
-}
+
 .sec0>.bar{
     position: absolute;
-    top:120%;
+    top:135%;
     left:0;
     width:100%;
     height: 15%;
