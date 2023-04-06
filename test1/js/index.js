@@ -115,7 +115,7 @@ window.onload = function(){
             console.log("레벨5");
         }
 
-        $(".result_pic").css("background","url(../img/level"+level+".png) no-repeat");
+        $(".result_pic").css("background","url(./img/level"+level+".png) no-repeat");
         $(".result_pic").css("background-size","100%");
         
         console.log("a:"+a);
