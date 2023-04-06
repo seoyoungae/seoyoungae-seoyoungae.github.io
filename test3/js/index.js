@@ -50,18 +50,28 @@ const qna = [
         "어떻게 적을지 미리 생각해 놓고 옮겨 적는다"]}
 ]
 
-let i, num=0, q, a=0, result, time;
+let i, num=0, q, a=0, result, file_name, connectedDate, prev_time;
 let ie=0, ns=0, ft=0, pj=0;
 
 window.onload = function(){
     a=0;
+
     connectedDate = new Date();
+    console.log(connectedDate);
+    
+   
     $(".q").html(qna[0].q);
     
     $(".a:eq(0)").html(qna[0].a[0]);
     $(".a:eq(1)").html(qna[0].a[1]);
-
     
+    // setInterval(function(){
+    //     var currentDate = new Date();
+    //     console.log(currentDate);
+    //     time = Number((currentDate - connectedDate)/1000);
+    //     console.log(time);
+    //     window.time = time;
+    // },1000);
     $(".pic").on("click", function(){
         location.href="quiz.html";
     })
@@ -131,6 +141,8 @@ window.onload = function(){
                 result+="p";
             }
             localStorage.setItem('result_save',result);
+
+        
         }
 
         
@@ -181,40 +193,23 @@ window.onload = function(){
         setTimeout(function(){
             $(".loading").hide();
             $(".result_pic").show();
-            $(".result_pic").css("height","200px");
 
         }, 5000);
 
-        
+        // resultOnce();
      
-    function showClock(){
-        var currentDate = new Date();
-         
-    time = Number((currentDate - connectedDate)/1000);
-    }
-             
-    setTimeout(showClock,1000);
-
-        console.log(time);
-        if(time>1800){
-            setTimeout(function(){
-                $(".c_btn").show();
-                $(".result_pic").css("heigth","200px");
-            })
-        }
 
         if(localStorage.getItem('result_save')){
             result = localStorage.getItem('result_save');
         }
         $(".result_pic").css("background", "url(./img/"+result+".png)");
         $(".result_pic").css("backgroundSize", "100%");
+
+        prev_time=Number(window.name)
+        
     }
        
-    $(".c_btn").on("click", function(){
-        $(".result_pic").css("height","1000px");
-        $(".c_btn").hide();
-        window.open("https://link.coupang.com/a/TYJmC")
-    })
+    
     $(".link").on("click",function(){
         var url = '';
         var textarea = document.createElement("textarea");
@@ -230,3 +225,22 @@ window.onload = function(){
         location.href="../index.html";
     })
 }
+
+
+// function once(fn, context) { 
+//     var result;
+ 
+//     return function() { 
+//         if(fn) {
+//             result = fn.apply(context || this, arguments);
+//             fn = null;
+//         }
+ 
+//         return result;
+//     };
+// }
+
+// var resultOnce = once(function(){
+//     $(".c_btn").show();
+//     $(".result_pic").css("height","200px");
+// }); 

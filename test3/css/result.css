@@ -29,6 +29,7 @@ section, .loading{
   font-size: 0.5rem;
   width:100%;
   text-align: center;
+
 }
 .sec0>p{
     width:100%;
@@ -41,10 +42,10 @@ section, .loading{
 }
 .sec0>.result_pic{
     width:100%;
-    height: 200px;
+    height: 1000px;
     margin-left:50%;
     transform: translateX(-50%);
-    display: none;
+   display: none;
 }
 .sec0>.result_pic>.c_btn{
   position: relative;
@@ -60,6 +61,7 @@ section, .loading{
   text-align: center;
   cursor: pointer;
   padding:10px;
+  display: none;
 }
 sec0>.result_pic>.c_btn>sapn{
   font-size:0.6rem;
