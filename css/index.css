@@ -44,6 +44,10 @@ section{
     background: url(/img/test3_main.png);
     background-size: 100% 100%;
 }
+.sec0>.test_list>div:nth-child(3){
+    background: url(/img/test4_main.png);
+    background-size: 100% 100%;
+}
 .sec0>.test_list>div:nth-child(4){
     background: url(/img/new_main_crt8_ov.png);
         background-size: 100% 100%;

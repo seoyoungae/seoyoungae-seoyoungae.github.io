@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'KimjungchulGothic-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+*{
+    font-family: 'KimjungchulGothic-Bold';
+    font-size: 16px;
+    list-style: none;
+    color:black;
+    text-decoration: none;
+}
+section{
+    width:550px;
+    /* height: 800px; */
+    border:0px solid black;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+.sec0>.pic{
+    width:100%;
+    margin-top: 100px;
+}
+.sec0>.pic>img{
+    width:100%;
+}
+.sec0>.btn_start{
+    width:300px;
+    height: 100px;
+    border: 0px solid white;
+    margin-top:-220px;
+    text-align: center;
+    /* background: plum; */
+    border-radius: 10px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.sec0>.btn_start>a{
+    line-height: 50px;
+    font-size: 2rem;
+}
+.sec0>.link,
+.sec0>.home{
+    position: absolute;
+    top:580px;
+    left:50%;
+    width:120px;
+    height: 60px;
+    background: url(../img/box.png);
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sec0>.home{
+    top:650px;
+    width:220px;
+    margin-bottom: 100px;
+    /* border: 1px solid white; */
+}
+@media (max-width:500px) {
+    section, .pic{
+        width:100%;
+    }
+    .sec0>.link{
+        top:135%;
+        width:30%;
+    }
+    .sec0>.home{
+        top:155%;
+        width:50%;
+    }
+}

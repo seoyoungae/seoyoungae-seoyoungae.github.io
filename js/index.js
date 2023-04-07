@@ -32,6 +32,9 @@ window.onload = function(){
         location.href="/test3/index.html";
     })
     
+    $(".test3").on("click", function(){
+        location.href="/test4/index.html";
+    })
 
     $(".tag_box>li").on("click", function(){
         i=$(this).index()+1;
