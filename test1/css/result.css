@@ -50,19 +50,41 @@ section, .loading{
     transform: translateX(-50%);
     /* margin-top: 50px; */
 }
-.sec0>.result_pic>.c_btn{
+.sec0>.result_pic>.btn{
   position: relative;
   top:130px;
   left:50%;
   transform: translateX(-50%);
   width:250px;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
   border-radius: 10px;
   background: palegreen;
   text-align: center;
-  cursor: pointer;
 }
+
+.sec0>.result_pic>.btn>.c_btn{
+  display: inline-block;
+  height: 100%;
+  padding-top: 15px;
+  padding-left: 35px;
+  padding-right: 15px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.sec0>.result_pic>.btn>.c_btn>.message{
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.sec0>.result_pic>.btn>.x_btn{
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  font-size: small;
+}
+
 .sec0>.btn_box{
   position: absolute;
   top:690px;

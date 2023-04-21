@@ -24,6 +24,17 @@ window.onload = function(){
     a=0;
     result=0;
 
+    // timer
+    var timer = 5;
+    var interval = setInterval(function(){
+        timer--;
+        $(".x_btn").text(timer);
+        if(timer===0){
+            $(".x_btn").text("x");
+            clearInterval(interval);
+        }
+    }, 1000);
+
     $(".btn_start").on("click", function(){
         location.href = "quiz.html";
     })
@@ -128,10 +139,17 @@ window.onload = function(){
     }
     $(".c_btn").on("click", function(){
         $(".result_pic").css("height","600px");
-        $(".c_btn").hide();
+        $(".btn").hide();
         window.open("https://link.coupang.com/a/TYJmC");
         $(".btn_box").show();
     })
+
+    $(".x_btn").on("click", function(){
+        $(".btn").hide();
+        $(".result_pic").css("height","600px");
+        $(".btn_box").show();
+    })
+
     $(".link").on("click",function(){
         var url = '';
         var textarea = document.createElement("textarea");
