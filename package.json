@@ -1,0 +1,24 @@
+{
+  "name": "mbti",
+  "version": "1.0.0",
+  "description": "\"# seoyoungae.github.io\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samknp/mbti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samknp/mbti/issues"
+  },
+  "homepage": "https://github.com/samknp/mbti#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

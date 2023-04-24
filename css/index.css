@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'KimjungchulGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+*{
+    font-family: 'KimjungchulGothic';
+    font-size: 16px;
+    list-style: none;
+    color:black;
+    text-decoration: none;
+    font-weight: 300;
+}
+section{
+    width:400px;
+    border:0px solid black;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>.test_list>div{
+    position: relative;
+    top:0;
+    left:0;
+    width:100%;
+    height: 400px;
+    border: 1px solid white;
+    margin-bottom: 40px;
+    cursor: pointer;
+    background: url(../img/new_main_crt8_ov.png);
+    background-size: 100% 100%;
+}
+
+.sec0>.main{
+    height: 280px;
+    background: url(../img/test_main.png);
+    background-size: 100% 100%;
+}
+.sec0>.test_list>div:nth-child(1){
+    background: url(../img/test1.png);
+    background-size: 100% 100%;
+}
+.sec0>.test_list>div:nth-child(2){
+    background: url(../img/test3_main.png);
+    background-size: 100% 100%;
+}
+.sec0>.test_list>div:nth-child(3){
+    background: url(../img/test4_main.png);
+    background-size: 100% 100%;
+}
+.sec0>.test_list>div:nth-child(4){
+    background: url(../img/new_main_crt8_ov.png);
+        background-size: 100% 100%;
+}
+.sec0>.test_list>div>p{
+    width:70%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top:30%;
+    margin-left:15%;
+    font-size: 2rem;
+}
+.sec0>.test_list>div>.tag_crown{
+    position: absolute;
+    top:-110px;
+    left:-150px;
+    font-size: 2rem;
+    
+}
+.sec0>.test_list>.tag_2>.tag_crown>i{
+    font-size:2rem;
+    color:rgb(251, 255, 0);
+}
+.sec0>.test_list>.tag_3>.tag_crown>i{
+    font-size:2rem;
+    color:rgb(255, 145, 0);
+}
+.sec0>.test_list>.tag_4>.tag_crown>i{
+    font-size:2rem;
+    color:rgb(152, 18, 167);
+}
+.sec0>.test_list>.tag_5>.tag_crown>i{
+    font-size:2rem;
+    color:rgb(0, 181, 175);
+}
+.sec0>.tag_box{
+    width:100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 0px solid blue;
+    padding-inline-start: 0px;
+    margin: 50px 0;
+}
+.sec0>.tag_box>li{
+    width:13%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:0;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-weight: 300;
+    box-shadow: 5px 5px black;
+}
+.sec0>.tag_box>li:nth-child(1){
+    margin-left:0;
+    box-shadow: 5px 5px black;
+}
+.sec0>.tag_box>li:nth-child(2){
+    margin-left:0;
+    box-shadow: 5px 5px rgb(251, 255, 0);
+}
+.sec0>.tag_box>li:nth-child(3){
+    margin-left:0;
+    box-shadow: 5px 5px rgb(255, 145, 0);
+}
+.sec0>.tag_box>li:nth-child(4){
+    margin-left:0;
+    box-shadow: 5px 5px rgb(152, 18, 167);
+}
+.sec0>.tag_box>li:nth-child(5){
+    margin-left:0;
+    box-shadow: 5px 5px rgb(0, 181, 175);
+}
