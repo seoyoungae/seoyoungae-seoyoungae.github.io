@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     font-size: 16px;
     list-style: none;
@@ -143,4 +144,151 @@ section{
 }
 .quiz1{
     z-index: 3;
+=======
+*{
+    font-size: 16px;
+    list-style: none;
+    color:black;
+    text-decoration: none;
+}
+section{
+    position:relative;
+    top:0;
+    left:0;
+    width:390px;
+    height: 1000px;
+    border:1px solid white;
+    
+    /* background: paleturquoise; */
+}
+.sec0{
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>.title{
+    width:100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.5rem;
+    text-align: center;
+    /* color: white; */
+}
+.sec0>iframe{
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>p{
+    font-size: 0.5rem;
+    width:100%;
+    text-align: center;
+}
+.sec0>.prev{
+    position: absolute;
+    top:83%;
+    left:0;
+    width:100px;
+    height: 40px;
+    line-height: 40px;
+    border: 0px solid black;
+    text-align: center;
+    margin-top:50px;
+    border-radius: 10px;
+    background: paleturquoise;
+    cursor: pointer;
+}
+.sec0>.quiz{
+    position: absolute;
+    top:35%;
+    left:0;
+    width:100%;
+    height: 50%;
+    border: 0px solid black;
+    background: white;
+}
+.sec0>.quiz>p{
+    width:100%;
+    height:60px;
+    line-height: 1.75;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.sec0>.quiz>div{
+    width: 100%;
+        /* border: 1px solid paleturquoise; */
+    background: white;
+}
+.sec0>.quiz>div>div{
+    width:100%;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom:50px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    line-height: 70px;
+    cursor: pointer;
+    padding:20px;
+}
+.sec0>.quiz>div>div:nth-child(1){
+    margin-top:30px;
+}
+.sec0>.btn{
+    position: absolute;
+    top:72%;
+    width:100%;
+    height: 50px;
+    border: 0px solid black;
+}
+.sec0>.btn>div{
+    width:40%;
+    height: 100%;
+    border: 1px solid black;
+    line-height: 50px;
+    text-align: center;
+    background: rgb(255, 255, 123);
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+.sec0>.bar{
+    position: absolute;
+    top:90%;
+    left:0;
+    width:100%;
+    height: 15%;
+    border: 0px solid black;
+}
+.sec0>.bar>ul{
+    width:100%;
+    height: 10px;
+    border:0px solid black;
+    display: flex;
+    padding:0;
+}
+.sec0>.bar>ul>li{
+    width:20%;
+    height: 100%;
+    border: 1px solid white;
+    margin-left:0;
+}
+.sec0>.bar>ul>li:nth-child(1){
+    background: plum;
+}
+.sec0>.bar>.page{
+    width:100%;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.sec0>.bar>.page>p{
+    width:10%;
+}
+.quiz{
+    z-index: 0;
+}
+.quiz1{
+    z-index: 3;
+>>>>>>> 9c76c74bf9b68555402084618464aa84861ccbb3
 }

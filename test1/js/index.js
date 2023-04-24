@@ -25,7 +25,19 @@ window.onload = function(){
     result=0;
 
     // timer
+<<<<<<< HEAD
     
+=======
+    var timer = 5;
+    var interval = setInterval(function(){
+        timer--;
+        $(".x_btn").text(timer);
+        if(timer===0){
+            $(".x_btn").text("x");
+            clearInterval(interval);
+        }
+    }, 1000);
+>>>>>>> 9c76c74bf9b68555402084618464aa84861ccbb3
 
     $(".btn_start").on("click", function(){
         location.href = "quiz.html";
@@ -118,6 +130,7 @@ window.onload = function(){
             console.log("레벨5");
         }
 
+<<<<<<< HEAD
         var timer = 5;
     var interval = setInterval(function(){
         timer--;
@@ -128,6 +141,8 @@ window.onload = function(){
         }
     }, 1000);
 
+=======
+>>>>>>> 9c76c74bf9b68555402084618464aa84861ccbb3
         $(".result_pic").css("background","url(./img/level"+level+".png) no-repeat");
         $(".result_pic").css("background-size","100%");
         
@@ -140,7 +155,11 @@ window.onload = function(){
         
     }
     $(".c_btn").on("click", function(){
+<<<<<<< HEAD
         $(".result_pic").css("height","1000px");
+=======
+        $(".result_pic").css("height","600px");
+>>>>>>> 9c76c74bf9b68555402084618464aa84861ccbb3
         $(".btn").hide();
         window.open("https://link.coupang.com/a/TYJmC");
         $(".btn_box").show();
@@ -148,7 +167,11 @@ window.onload = function(){
 
     $(".x_btn").on("click", function(){
         $(".btn").hide();
+<<<<<<< HEAD
         $(".result_pic").css("height","1000px");
+=======
+        $(".result_pic").css("height","600px");
+>>>>>>> 9c76c74bf9b68555402084618464aa84861ccbb3
         $(".btn_box").show();
     })
 
