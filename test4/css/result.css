@@ -61,7 +61,6 @@ section, .loading{
   background: palegreen;
   text-align: center;
 }
-
 .sec0>.result_pic>.btn>.c_btn{
   display: inline-block;
   height: 100%;
@@ -84,7 +83,6 @@ section, .loading{
   cursor: pointer;
   font-size: small;
 }
-
 .sec0>.btn_box{
   position: absolute;
   top:690px;

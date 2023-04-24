@@ -25,8 +25,20 @@ window.onload = function(){
     result=0;
 
     // timer
-    
-
+    var timer = 5;
+    var timeout = setTimeout(function x_func(){
+        timer--;
+        if(timer===0){
+        }
+        $(".x_btn").text(timer);
+        if(timer===0){
+            $(".x_btn").text("x");
+            clearTimeout(timeout);   
+        }
+        if(timer>0){
+            timeout = setTimeout(x_func, 1000);
+        }
+    },6000)
     $(".btn_start").on("click", function(){
         location.href = "quiz.html";
     })
@@ -118,16 +130,6 @@ window.onload = function(){
             console.log("레벨5");
         }
 
-        var timer = 5;
-    var interval = setInterval(function(){
-        timer--;
-        $(".x_btn").text(timer);
-        if(timer===0){
-            $(".x_btn").text("x");
-            clearInterval(interval);
-        }
-    }, 1000);
-
         $(".result_pic").css("background","url(./img/level"+level+".png) no-repeat");
         $(".result_pic").css("background-size","100%");
         
@@ -151,7 +153,6 @@ window.onload = function(){
         $(".result_pic").css("height","1000px");
         $(".btn_box").show();
     })
-
     $(".link").on("click",function(){
         var url = '';
         var textarea = document.createElement("textarea");
